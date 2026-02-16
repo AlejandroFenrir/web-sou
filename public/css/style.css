@@ -1220,8 +1220,8 @@ blockquote.vert-move {
     color: #737373;
 }
 .nav-scroll .logo-img {
-    width: 116px;
-    padding: 20px;
+    width: 100px;
+    padding: 10px;
 }
 .nav-scroll .logo-img {
     margin-bottom: 0px;
@@ -6877,6 +6877,30 @@ body.mfp-zoom-out-cur {
     color: #fff;
     display: block;
 }
+.careers .item .experience {
+    font-weight: 300;
+    color: #737373;
+    transition: color .3s, transform .45s ease;
+}
+.careers .item .experience span {
+    font-family: "Outfit", sans-serif;
+    color: #fff;
+    display: block;
+}
+.careers .item .metrics {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 14px;
+    margin-top: 10px;
+    color: #fff;
+    transition: color .3s, transform .45s ease;
+}
+.careers .item .metric {
+    font-family: "Outfit", sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    color: #fff;
+}
 .careers .item .icon {
     font-size: 15px;
     line-height: 1;
@@ -6888,33 +6912,34 @@ body.mfp-zoom-out-cur {
 }
 /* hover effect */
 .careers .item:hover {
-    background-color: #278162;
+    background-color: #FD961E;
     transform: translateY(-4px);
     border-bottom: 0px solid rgba(255,255,255,0.04);
 }
 .careers .item:hover::after {
     transform: translateX(30px);
 }
-.careers .item:hover .title {
-    transform: translateX(6px);
-}
-.careers .item:hover .location {
-    transform: translateX(12px);
-}
-.careers .item:hover .time {
-    transform: translateX(18px);
+.careers .item:hover .title,
+.careers .item:hover .location,
+.careers .item:hover .time,
+.careers .item:hover .experience,
+.careers .item:hover .metrics {
+    transform: translateX(8px);
 }
 .careers .item:hover .icon {
     transform: translateX(-6px);
 }
 .careers .item:hover .title,
 .careers .item:hover .location,
-.careers .item:hover .time {
+.careers .item:hover .time,
+.careers .item:hover .experience,
+.careers .item:hover .metrics {
     color: #171717;
 }
 .careers .item:hover .title span,
 .careers .item:hover .location span,
-.careers .item:hover .time span {
+.careers .item:hover .time span,
+.careers .item:hover .experience span {
     color: #555;
 }
 .careers .item:hover .icon {
@@ -7598,5 +7623,4 @@ body.mfp-zoom-out-cur {
     z-index: 0;
     pointer-events: none;
 }
-
 

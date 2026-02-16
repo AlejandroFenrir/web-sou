@@ -146,17 +146,20 @@
     CustomApp.init();
     
     // Navbar scrolling background 
-    wind.on("scroll", function () {
+    var updateNavbarOnScroll = function () {
         var bodyScroll = wind.scrollTop(),
             navbar = $(".navbar"),
             logo = $(".navbar .logo> img");
         if (bodyScroll > 100) {
             navbar.addClass("nav-scroll");
+            logo.attr('src', '/img/logo-scroll.svg');
         } else {
             navbar.removeClass("nav-scroll");
+            logo.attr('src', '/img/logo-dark.svg');
         }
-        logo.attr('src', '/img/logo-dark.svg');
-    });
+    };
+    wind.on("scroll", updateNavbarOnScroll);
+    updateNavbarOnScroll();
     
     // Close navbar-collapse when a  clicked 
     $(document).on('click', '.navbar-nav .dropdown-item a', function () {

@@ -2,8 +2,8 @@
   <footer class="footer">
     <div
       class="background banner-img bg-img bg-imgfixed bg-position-top"
-      data-background="/img/banner.jpg"
-      data-overlay-dark="7"
+      :data-background="footer.background.image"
+      :data-overlay-dark="footer.background.overlayDark"
     >
       <div class="container">
         <div class="top">
@@ -11,22 +11,13 @@
             <div class="col-md-4">
               <div class="item">
                 <div class="logo mb-30">
-                  <img src="/img/logo-dark.svg" alt="" />
+                  <img :src="footer.brand.logo" alt="" />
                 </div>
-                <p class="mb-15">
-                  SOU Ingeniería e Inspección SpA
-                  <br />Ingeniería estructural, inspección de obras y asesorías Sur de Chile
-                </p>
+                <p class="mb-15" v-html="footer.brand.description.replace(/\n/g, '<br />')"></p>
                 <div class="social-icons mb-30">
                   <ul class="list-inline">
-                    <li>
-                      <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="fab fa-x-twitter"></i></a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <li v-for="(item, index) in footer.brand.social" :key="index">
+                      <a :href="item.href"><i :class="item.iconClass"></i></a>
                     </li>
                   </ul>
                 </div>
@@ -34,13 +25,13 @@
             </div>
             <div class="col-md-8">
               <div class="item text-end-left">
-                <h3 class="mb-30">Hablemos</h3>
-                <p class="mb-5">Puerto Montt</p>
+                <h3 class="mb-30">{{ footer.contact.title }}</h3>
+                <p class="mb-5">{{ footer.contact.location }}</p>
                 <div class="phone mb-5">
-                  <a href="tel:+56997829016">+56 9 9782 9016</a>
+                  <a :href="footer.contact.phoneHref">{{ footer.contact.phone }}</a>
                 </div>
                 <div class="mail">
-                  <a href="mailto:contacto@souingenieria.cl">contacto@souingenieria.cl</a>
+                  <a :href="footer.contact.emailHref">{{ footer.contact.email }}</a>
                 </div>
               </div>
             </div>
@@ -51,17 +42,15 @@
             <div class="col-lg-8 col-md-12">
               <div class="links">
                 <ul>
-                  <li><RouterLink to="/">Inicio</RouterLink></li>
-                  <li><RouterLink to="/nosotros">Nosotros</RouterLink></li>
-                  <li><RouterLink to="/servicios">Servicios</RouterLink></li>
-                  <li><RouterLink to="/proyectos">Proyectos</RouterLink></li>
-                  <li><RouterLink to="/contacto">Contacto</RouterLink></li>
-                  <li><RouterLink to="/zona-sismica">Zona Sísmica</RouterLink></li>
+                  <li v-for="(link, index) in footer.links" :key="index">
+                    <RouterLink v-if="link.type === 'route'" :to="link.href">{{ link.label }}</RouterLink>
+                    <a v-else :href="link.href" :target="link.target" :rel="link.rel">{{ link.label }}</a>
+                  </li>
                 </ul>
               </div>
             </div>
             <div class="col-lg-4 col-md-12 text-end">
-              <p>Copyright 2026 by SOU</p>
+              <p>{{ footer.copyright }}</p>
             </div>
           </div>
         </div>
@@ -69,3 +58,7 @@
     </div>
   </footer>
 </template>
+
+<script setup>
+import footer from '../data/footer/Footer.js';
+</script>

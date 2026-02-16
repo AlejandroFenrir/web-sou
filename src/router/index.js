@@ -4,10 +4,9 @@ import Nosotros from '../views/Nosotros.vue';
 import Servicios from '../views/Servicios.vue';
 import Proyectos from '../views/Proyectos.vue';
 import Contacto from '../views/Contacto.vue';
-import ZonaSismica from '../views/ZonaSismica.vue';
 import ServiceDetails from '../views/ServiceDetails.vue';
 import PortfolioSingle from '../views/PortfolioSingle.vue';
-import Pricing from '../views/Pricing.vue';
+import Blog from '../views/Blog.vue';
 import Post from '../views/Post.vue';
 import NotFound from '../views/NotFound.vue';
 
@@ -19,10 +18,9 @@ const router = createRouter({
     { path: '/servicios', name: 'servicios', component: Servicios },
     { path: '/proyectos', name: 'proyectos', component: Proyectos },
     { path: '/contacto', name: 'contacto', component: Contacto },
-    { path: '/zona-sismica', name: 'zona-sismica', component: ZonaSismica },
     { path: '/service-details', name: 'service-details', component: ServiceDetails },
     { path: '/portfolio-single', name: 'portfolio-single', component: PortfolioSingle },
-    { path: '/pricing', name: 'pricing', component: Pricing },
+    { path: '/blog', name: 'blog', component: Blog },
     { path: '/post', name: 'post', component: Post },
     { path: '/:pathMatch(.*)*', name: 'not-found', component: NotFound },
   ],
