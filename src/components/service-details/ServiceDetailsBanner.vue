@@ -5,6 +5,9 @@
     :data-overlay-dark="banner.overlayDark"
     :data-background="banner.background"
   >
+    <video v-if="banner.video" class="banner-video" autoplay muted loop playsinline>
+      <source :src="banner.video" type="video/mp4" />
+    </video>
     <div class="container">
       <div class="row">
         <div class="col-md-12 text-center">
@@ -16,5 +19,18 @@
 </template>
 
 <script setup>
-import banner from '../../data/service-details/ServiceDetailsBanner.js';
+import { computed } from 'vue';
+
+const props = defineProps({
+  banner: {
+    type: Object,
+    default: () => ({
+      title: '',
+      background: '',
+      overlayDark: 5,
+    }),
+  },
+});
+
+const banner = computed(() => props.banner || {});
 </script>

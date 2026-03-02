@@ -1,12 +1,12 @@
 ﻿const data = {
-  title: 'Living Room Aesthetics',
+  title: 'Norma chilena de diseno sismico: cambios clave 2026',
   background: '/img/09.jpg',
   overlayDark: 6,
   author: {
-    name: 'Emily Brown',
-    avatar: '/img/team/2.jpg'
+    name: 'Sebastian Ojeda',
+    avatar: '/img/team/1.jpg'
   },
-  date: '27 Dec 2026'
+  date: '16 Feb 2026'
 };
 
 export default data;

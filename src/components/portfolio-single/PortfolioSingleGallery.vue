@@ -1,6 +1,6 @@
 ﻿<template>
   <!-- Gallery Scroll Image -->
-  <section class="galleryscroll section-padding pt-0">
+  <section ref="galleryRoot" class="galleryscroll section-padding pt-0">
     <div class="container">
       <div class="section-linetitle">
         <div class="d-flex align-items-center">
@@ -10,10 +10,10 @@
         <div class="title"><h6 class="sub-title">{{ gallery.sectionSubtitle }}</h6></div>
       </div>
     </div>
-    <div class="container-fluid p-0 box-right-7">
+    <div v-if="hasImages" class="container-fluid p-0 box-right-7">
       <div class="row">
         <div class="col-md-12">
-          <div class="owl-carousel owl-theme">
+          <div class="owl-carousel owl-theme" :key="galleryKey">
             <div v-for="(image, index) in gallery.images" :key="index" class="item">
               <a :href="image" title="" class="img-zoom">
                 <div class="img">
@@ -25,9 +25,72 @@
         </div>
       </div>
     </div>
+    <div v-else class="container">
+      <div class="row">
+        <div class="col-12">
+          <p class="text-center py-5 mb-0">No hay imagenes</p>
+        </div>
+      </div>
+    </div>
   </section>
 </template>
 
 <script setup>
-import gallery from '../../data/portfolio-single/PortfolioSingleGallery.js';
+import { computed, nextTick, onMounted, ref, watch } from 'vue';
+import { destroyOwl, refreshOwl } from '../../utils/theme';
+
+const props = defineProps({
+  gallery: {
+    type: Object,
+    default: null,
+  },
+});
+
+const galleryRoot = ref(null);
+
+const gallery = computed(() => ({
+  sectionLetter: props.gallery?.sectionLetter || '',
+  sectionSubtitle: props.gallery?.sectionSubtitle || '',
+  images: Array.isArray(props.gallery?.images) ? props.gallery.images : [],
+}));
+
+const hasImages = computed(() => gallery.value.images.length > 0);
+const galleryKey = computed(() => `${props.gallery?.key || ''}|${gallery.value.images.join('|')}`);
+
+let refreshToken = 0;
+
+const waitForImages = async () => {
+  const root = galleryRoot.value;
+  if (!root) return;
+  const images = Array.from(root.querySelectorAll('img'));
+  if (!images.length) return;
+  await Promise.all(
+    images.map(
+      (img) =>
+        img.complete
+          ? Promise.resolve()
+          : new Promise((resolve) => {
+              const done = () => resolve();
+              img.addEventListener('load', done, { once: true });
+              img.addEventListener('error', done, { once: true });
+            })
+    )
+  );
+};
+
+const refreshGallery = async () => {
+  if (!hasImages.value) return;
+  const token = ++refreshToken;
+  destroyOwl('.galleryscroll .owl-carousel');
+  await nextTick();
+  await waitForImages();
+  if (token !== refreshToken) return;
+  refreshOwl('.galleryscroll .owl-carousel');
+};
+
+onMounted(refreshGallery);
+watch(
+  () => galleryKey.value,
+  () => refreshGallery()
+);
 </script>

@@ -1,7 +1,8 @@
 ﻿const data = {
   title: 'Nuestros servicios',
-  background: '/img/banner.jpg',
-  overlayDark: 7
+  background: '/img/04.jpg',
+  overlayDark: 7,
+  video: '/img/04.mp4'
 };
 
 export default data;

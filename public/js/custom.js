@@ -348,7 +348,7 @@
         margin: 20,
         mouseDrag: true,
         autoplay: true,
-        autoplayTimeout: 5000,
+        autoplayTimeout: 2000,
         smartSpeed: 1000,
         dots: false,
         nav: false,
@@ -374,7 +374,7 @@
         margin: 20,
         mouseDrag: true,
         autoplay: true,
-        autoplayTimeout: 5000,
+        autoplayTimeout: 2000,
         smartSpeed: 1000,
         dots: false,
         nav: false,
@@ -399,7 +399,8 @@
         loop: true,
         margin: 20,
         mouseDrag: true,
-        autoplay: false,
+        autoplay: true,
+        autoplayTimeout: 2000,
         dots: false,
         autoplayHoverPause: true,
         nav: false,
@@ -424,7 +425,9 @@
         margin: 20,
         dots: false,
         mouseDrag: true,
-        autoplay: false,
+        autoplay: true,
+        autoplayTimeout: 2000,
+        autoplayHoverPause: true,
         nav: false,
         navText: ["<span class='lnr ti-angle-left'></span>", "<span class='lnr ti-angle-right'></span>"],
         responsiveClass: true,
@@ -436,7 +439,7 @@
                 items: 2
             },
             1000: {
-                items: 4
+                items: 3
             }
         }
     });
@@ -472,8 +475,8 @@
         loop: true,
         margin: 20,
         mouseDrag: true,
-        autoplay: false,
-        autoplayTimeout: 5000,
+        autoplay: true,
+        autoplayTimeout: 2000,
         smartSpeed: 1000,
         dots: false,
         nav: false,
@@ -550,8 +553,8 @@
         loop: true,
         margin: 20,
         mouseDrag: true,
-        autoplay: false,
-        autoplayTimeout: 5000,
+        autoplay: true,
+        autoplayTimeout: 2000,
         smartSpeed: 1000,
         dots: false,
         nav: false,
@@ -604,7 +607,7 @@
         margin: 20,
         mouseDrag: true,
         autoplay: true,
-        autoplayTimeout: 4000,
+        autoplayTimeout: 2000,
         smartSpeed: 1000,
         dots: false,
         nav: false,

@@ -34,5 +34,28 @@
 </template>
 
 <script setup>
-import nav from '../../data/service-details/ServiceDetailsNav.js';
+import { computed } from 'vue';
+
+const props = defineProps({
+  nav: {
+    type: Object,
+    default: () => ({
+      prev: {
+        href: '/servicios',
+        title: '',
+        image: '',
+      },
+      next: {
+        href: '/servicios',
+        title: '',
+        image: '',
+      },
+      all: {
+        href: '/servicios',
+      },
+    }),
+  },
+});
+
+const nav = computed(() => props.nav || {});
 </script>

@@ -1,12 +1,12 @@
 ﻿const data = {
   prev: {
     href: '/post',
-    title: 'Modern Bathroom Details',
+    title: 'BIM en licitaciones públicas',
     image: '/img/07.jpg'
   },
   next: {
     href: '/post',
-    title: 'Functional Kitchen Design',
+    title: 'Inspección de soldaduras',
     image: '/img/08.jpg'
   },
   all: {

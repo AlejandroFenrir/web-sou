@@ -1,6 +1,6 @@
 ﻿const data = {
   sectionLetter: 'F',
-  sectionSubtitle: 'PREGUNTAS FRECUENTES',
+  sectionSubtitle: 'PREGUNTAS FRECUENTES.',
   title: 'Te ayudamos a tomar una decisión',
   faqs: [
     { question: '¿Qué tipo de proyectos desarrollan?', answer: '¿Qué tipo de proyectos desarrollan?' },

@@ -21,20 +21,25 @@
         <div class="col-lg-12 col-md-12">
           <div v-for="(member, index) in team.members" :key="index" class="item">
             <a class="link" :href="member.href"></a>
-            <div class="title">{{ member.name }} <span>{{ member.role }}</span></div>
+            <div class="title">
+              {{ member.name }} <span>{{ member.role }}</span>
+              <div v-if="member.achievements && member.achievements.length" class="metrics">
+                <div v-for="(achievement, aIndex) in member.achievements" :key="aIndex" class="metric">
+                  {{ achievement }}
+                </div>
+              </div>
+            </div>
             <div class="location">
-              <span>{{ team.labels.university }}</span> {{ member.university }}
+              <span class="label">{{ team.labels.university }}</span>
+              <span class="value">{{ member.university }}</span>
             </div>
             <div class="time">
-              {{ team.labels.specialty }} <span>{{ member.specialty }}</span>
+              <span class="label">{{ team.labels.specialty }}</span>
+              <span class="value">{{ member.specialty }}</span>
             </div>
             <div v-if="member.experience" class="experience">
-              {{ team.labels.experience }} <span>{{ member.experience }}</span>
-            </div>
-            <div v-if="member.achievements && member.achievements.length" class="metrics">
-              <div v-for="(achievement, aIndex) in member.achievements" :key="aIndex" class="metric">
-                {{ achievement }}
-              </div>
+              <span class="label">{{ team.labels.experience }}</span>
+              <span class="value">{{ member.experience }}</span>
             </div>
             <div class="icon"><i class="ti-arrow-top-right"></i></div>
           </div>

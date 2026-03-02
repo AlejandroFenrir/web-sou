@@ -15,6 +15,16 @@
           </blockquote>
         </div>
       </div>
+      <div class="row mb-45">
+        <div class="col-md-12">
+          <p class="post-highlight">{{ content.highlightParagraph }}</p>
+        </div>
+      </div>
+      <div class="row mb-60">
+        <div class="col-md-12">
+          <p>{{ content.bodyParagraph }}</p>
+        </div>
+      </div>
       <div class="row mb-60">
         <div class="col-md-12">
           <img :src="content.heroImage" alt="" class="img-fluid" />
@@ -33,11 +43,12 @@
           <img :src="image" class="mb-30 rounded-3" alt="" />
         </div>
       </div>
+      <!-- Comment 
+      
       <div class="post-comment-section">
         <div class="row justify-content-center">
           <div class="col-lg-10 col-md-12">
             <div class="row">
-              <!-- Comment -->
               <div class="col-md-5 mb-30">
                 <div class="post-comment-wrap">
                   <div class="post-user-comment"><img :src="content.comment.avatar" alt="" /></div>
@@ -47,7 +58,7 @@
                   </div>
                 </div>
               </div>
-              <!-- Contact Form -->
+              
               <div class="col-md-6 offset-md-1">
                 <h5 class="mb-30">{{ content.form.title }}</h5>
                 <form method="post">
@@ -89,6 +100,7 @@
           </div>
         </div>
       </div>
+      -->
     </div>
   </section>
 </template>

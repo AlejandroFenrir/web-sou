@@ -1,32 +1,36 @@
 ﻿const data = {
   intro: {
-    firstLetter: 'T',
-    text: 'The living room is the heart of every home, a space where functionality and beauty come together in perfect balance. In this project, modern design principles meet timeless comfort, creating an inviting atmosphere that reflects both sophistication and warmth.'
+    firstLetter: 'N',
+    text: 'Norma chilena de diseno sismico: cambios clave 2026. Revision de derivas, ductilidad y criterios de calculo para proyectos nuevos.'
   },
   quote: {
-    text: 'Simplicity is the ultimate sophistication.',
-    cite: 'Leonardo da Vinci'
+    text: 'Una buena norma no reemplaza un buen criterio, lo ordena.',
+    cite: 'Sebastian Ojeda'
   },
+  highlightParagraph:
+    'Cambios 2026: control de derivas mas detallado, ductilidad por sistema con bandas claras y criterios de calculo mas exigentes. El ajuste se siente en la definicion temprana de soluciones, en la coordinacion del modelo estructural y en el modo de validar el comportamiento global. La norma busca ordenar criterios y reducir discrepancias entre memorias, modelos y planos.',
+  bodyParagraph:
+    'En proyectos nuevos, estos ajustes impactan el anteproyecto, la coordinacion de especialidades y la documentacion para revision tecnica. Un buen flujo considera verificacion por etapas, trazabilidad de supuestos y consistencia entre cargas, combinaciones y resultados. El objetivo no es solo cumplir, sino facilitar revisiones, evitar reprocesos y dejar un expediente tecnico claro para la obra y la postventa.',
   heroImage: '/img/post.jpg',
   columns: [
-    'Soft neutral tones, natural textures, and carefully curated furniture pieces define the visual language of the interior. Every element from the lighting arrangement to the choice of fabrics has been thoughtfully selected to enhance spatial harmony and flow.',
-    'The design emphasizes openness, allowing light to move freely and connect indoors with the environment. The result is a serene, elegant living space that encourages relaxation, conversation and meaningful moments a true reflection of modern living aesthetics.'
+    'La revision 2026 pone enfasis en el control de derivas y en los rangos de ductilidad exigidos por sistema estructural. Esto impacta desde el anteproyecto hasta el desarrollo de especialidades.',
+    'Los criterios de calculo actualizados buscan uniformar la verificacion y reducir ambiguedades en la documentacion tecnica, facilitando revisiones y aprobaciones.'
   ],
   gallery: ['/img/post2.jpg', '/img/post3.jpg', '/img/post4.jpg'],
   comment: {
     avatar: '/img/team/2.jpg',
-    name: 'Emily Brown',
-    role: 'Design Lover',
-    text: 'Such a beautifully balanced space that feels calm, elegant, and truly inspiring'
+    name: 'Sebastian Ojeda',
+    role: 'Autor',
+    text: 'Un resumen claro de los ajustes mas relevantes para proyectos nuevos.'
   },
   form: {
-    title: 'Leave a Reply',
+    title: 'Deja un comentario',
     fields: [
-      { name: 'name', type: 'text', placeholder: 'Your name', iconClass: 'fa-light fa-face-smile', col: 6 },
-      { name: 'email', type: 'email', placeholder: 'Your email', iconClass: 'fa-light fa-envelope', col: 6 },
-      { name: 'message', type: 'textarea', placeholder: 'Message', iconClass: 'fa-light fa-comment', col: 12, rows: 3 }
+      { name: 'name', type: 'text', placeholder: 'Tu nombre', iconClass: 'fa-light fa-face-smile', col: 6 },
+      { name: 'email', type: 'email', placeholder: 'Tu correo', iconClass: 'fa-light fa-envelope', col: 6 },
+      { name: 'message', type: 'textarea', placeholder: 'Mensaje', iconClass: 'fa-light fa-comment', col: 12, rows: 3 }
     ],
-    submitText: 'Submit'
+    submitText: 'Enviar'
   }
 };
 

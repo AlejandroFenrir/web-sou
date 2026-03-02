@@ -1,7 +1,7 @@
 ﻿const data = {
   background: {
-    image: '/img/banner.jpg',
-    overlayDark: 7
+    image: '/img/footer.jpg',
+    overlayDark: 2
   },
   brand: {
     logo: '/img/logo-dark.svg',

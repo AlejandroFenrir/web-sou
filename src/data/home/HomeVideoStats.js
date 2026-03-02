@@ -1,6 +1,6 @@
 ﻿const data = {
   background: '/img/banner3.jpg',
-  overlayDark: 6,
+  overlayDark: 2,
   video: {
     href: 'https://youtu.be/XVM-4riPX4k',
     text: 'Ver Video'

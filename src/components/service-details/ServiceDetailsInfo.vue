@@ -33,5 +33,19 @@
 </template>
 
 <script setup>
-import info from '../../data/service-details/ServiceDetailsInfo.js';
+import { computed } from 'vue';
+
+const props = defineProps({
+  info: {
+    type: Object,
+    default: () => ({
+      scopeTitle: '',
+      scope: [],
+      faqTitle: '',
+      faqs: [],
+    }),
+  },
+});
+
+const info = computed(() => props.info || {});
 </script>
