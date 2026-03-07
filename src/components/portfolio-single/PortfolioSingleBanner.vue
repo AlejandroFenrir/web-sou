@@ -4,6 +4,7 @@
     class="banner-header middle-height section-padding valign bg-img bg-imgfixed"
     :data-overlay-dark="overlayDark"
     :data-background="background"
+    :style="backgroundStyle"
   >
     <div class="container">
       <div class="row">
@@ -25,7 +26,10 @@ const props = defineProps({
   },
 });
 
-const title = computed(() => props.banner?.title || 'Sin titulo');
+const title = computed(() => props.banner?.title || 'Sin título');
 const background = computed(() => props.banner?.background || null);
 const overlayDark = computed(() => props.banner?.overlayDark ?? 0);
+const backgroundStyle = computed(() =>
+  background.value ? { backgroundImage: `url(${background.value})` } : {}
+);
 </script>

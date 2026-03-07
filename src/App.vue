@@ -24,9 +24,20 @@ import { onMounted, onBeforeUnmount, nextTick, watch } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
 import Navbar from './components/Navbar.vue';
 import Footer from './components/Footer.vue';
+import { applySeo, getRouteSeo } from './utils/seo';
 
 const route = useRoute();
 const router = useRouter();
+
+const applyRouteSeo = () => {
+  const seo = getRouteSeo(route.name);
+  if (!seo) return;
+
+  applySeo({
+    ...seo,
+    path: route.fullPath,
+  });
+};
 
 const runPageInit = async () => {
   await nextTick();
@@ -57,6 +68,7 @@ const onDocumentClick = (event) => {
 onMounted(async () => {
   document.addEventListener('click', onDocumentClick);
   await nextTick();
+  applyRouteSeo();
   if (window.SOUTheme && typeof window.SOUTheme.init === 'function') {
     window.SOUTheme.init();
   } else {
@@ -71,6 +83,7 @@ onBeforeUnmount(() => {
 watch(
   () => route.fullPath,
   () => {
+    applyRouteSeo();
     runPageInit();
   }
 );

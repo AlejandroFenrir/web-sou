@@ -1,7 +1,7 @@
 ﻿<template>
   <!-- Gallery Scroll Image -->
-  <div ref="galleryRoot" class="galleryscroll">
-    <div v-if="hasImages" class="container-fluid p-0 box-right-7">
+  <div v-if="hasImages" ref="galleryRoot" class="galleryscroll">
+    <div class="container-fluid p-0 box-right-7">
       <div class="row">
         <div class="col-md-12">
           <div class="owl-carousel owl-theme" :key="galleryKey">
@@ -13,13 +13,6 @@
               </a>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
-    <div v-else class="container">
-      <div class="row">
-        <div class="col-12">
-          <p class="text-center py-5 mb-0">No hay imagenes</p>
         </div>
       </div>
     </div>

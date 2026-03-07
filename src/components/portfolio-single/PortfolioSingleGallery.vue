@@ -1,6 +1,6 @@
 ﻿<template>
   <!-- Gallery Scroll Image -->
-  <section ref="galleryRoot" class="galleryscroll section-padding pt-0">
+  <section v-if="hasImages" ref="galleryRoot" class="galleryscroll section-padding pt-0">
     <div class="container">
       <div class="section-linetitle">
         <div class="d-flex align-items-center">
@@ -10,25 +10,22 @@
         <div class="title"><h6 class="sub-title">{{ gallery.sectionSubtitle }}</h6></div>
       </div>
     </div>
-    <div v-if="hasImages" class="container-fluid p-0 box-right-7">
+    <div class="container-fluid p-0 box-right-7">
       <div class="row">
         <div class="col-md-12">
           <div class="owl-carousel owl-theme" :key="galleryKey">
             <div v-for="(image, index) in gallery.images" :key="index" class="item">
               <a :href="image" title="" class="img-zoom">
                 <div class="img">
-                  <img :src="image" class="img-fluid mx-auto d-block" alt="" />
+                  <img
+                    :src="image"
+                    class="img-fluid mx-auto d-block"
+                    :alt="gallery.title ? `${gallery.title} - imagen ${index + 1}` : `Galería del proyecto ${index + 1}`"
+                  />
                 </div>
               </a>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
-    <div v-else class="container">
-      <div class="row">
-        <div class="col-12">
-          <p class="text-center py-5 mb-0">No hay imagenes</p>
         </div>
       </div>
     </div>
@@ -52,6 +49,7 @@ const gallery = computed(() => ({
   sectionLetter: props.gallery?.sectionLetter || '',
   sectionSubtitle: props.gallery?.sectionSubtitle || '',
   images: Array.isArray(props.gallery?.images) ? props.gallery.images : [],
+  title: props.gallery?.title || '',
 }));
 
 const hasImages = computed(() => gallery.value.images.length > 0);

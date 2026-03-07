@@ -4,7 +4,7 @@ const services = [
     title: 'Ingeniería estructural',
     short:
       'Proyectos estructurales en hormigón armado, albañilería, acero y madera.<br /><br />',
-    image: '/img/v2.jpg',
+    image: '/img/services/home-01.jpg',
     iconClass: 'flaticon-houses',
     carouselSubtitle: 'Estructuras',
     home: {
@@ -15,7 +15,7 @@ const services = [
     },
     banner: {
       title: 'Ingeniería estructural',
-      background: '/img/05.jpg',
+      background: '/img/services/01.jpg',
       overlayDark: 5,
     },
     intro: {
@@ -70,7 +70,7 @@ const services = [
     title: 'Inspección técnica de obras',
     short:
       'Control del fiel cumplimiento de la ejecución de obras, plazos, calidad, avance físico y financiero.',
-    image: '/img/v4.jpg',
+    image: '/img/services/home-02.jpg',
     iconClass: 'flaticon-living-room',
     carouselSubtitle: 'Inspección',
     home: {
@@ -81,7 +81,7 @@ const services = [
     },
     banner: {
       title: 'Inspección técnica de obras',
-      background: '/img/01.jpg',
+      background: '/img/services/02.jpg',
       overlayDark: 6,
     },
     intro: {
@@ -136,7 +136,7 @@ const services = [
     title: 'Modelación y revisión BIM',
     short:
       'Modelación 3D, revisión de interferencias entre especialidades y optimización de costos y plazos de proyecto.',
-    image: '/img/v7.jpg',
+    image: '/img/services/home-03.jpg',
     iconClass: 'flaticon-interior-design',
     carouselSubtitle: 'BIM',
     home: {
@@ -147,7 +147,7 @@ const services = [
     },
     banner: {
       title: 'Modelación y revisión BIM',
-      background: '/img/02.jpg',
+      background: '/img/services/03.jpg',
       overlayDark: 6,
     },
     intro: {
@@ -202,7 +202,7 @@ const services = [
     title: 'Asesorías',
     short:
       'Estudio, cubicación y presupuesto de proyectos. Regularización de edificaciones<br /><br />',
-    image: '/img/v8.jpg',
+    image: '/img/services/home-04.jpg',
     iconClass: 'flaticon-medieval-house',
     carouselSubtitle: 'Asesorías',
     home: {
@@ -215,7 +215,7 @@ const services = [
     },
     banner: {
       title: 'Asesorías',
-      background: '/img/08.jpg',
+      background: '/img/services/04.jpg',
       overlayDark: 7,
     },
     intro: {
@@ -270,7 +270,7 @@ const services = [
     title: 'Ingeniería sanitaria',
     short:
       'Proyectos de instalaciones domiciliarias de agua potable y alcantarillado urbano y rural.<br /><br />',
-    image: '/img/v1.jpg',
+    image: '/img/services/home-05.jpg',
     iconClass: 'flaticon-kitchen',
     carouselSubtitle: 'Sanitaria',
     home: {
@@ -281,7 +281,7 @@ const services = [
     },
     banner: {
       title: 'Ingeniería sanitaria',
-      background: '/img/06.jpg',
+      background: '/img/services/05.jpg',
       overlayDark: 6,
     },
     intro: {
@@ -336,7 +336,7 @@ const services = [
     title: 'Levantamiento estructural',
     short:
       'Escáner de armaduras, medición de espesores de perfiles. Plan de ensayos para evaluación estructural',
-    image: '/img/v6.jpg',
+    image: '/img/services/home-06.jpg',
     iconClass: 'flaticon-bathtub',
     carouselSubtitle: 'Levantamiento',
     home: {
@@ -347,7 +347,7 @@ const services = [
     },
     banner: {
       title: 'Levantamiento estructural',
-      background: '/img/03.jpg',
+      background: '/img/services/06.jpg',
       overlayDark: 6,
     },
     intro: {
@@ -393,6 +393,72 @@ const services = [
           question: '¿Entregan planos del levantamiento?',
           answer:
             'Sí, entregamos planos y reportes con la información obtenida.',
+        },
+      ],
+    },
+  },
+  {
+    slug: 'recepcion-sellos-fundacion',
+    title: 'Recepción de sellos de fundación',
+    short:
+      'Servicio independiente que verifica que el suelo real coincida con el estudio mecánico de suelos y autoriza el inicio de fundaciones.',
+    image: '/img/services/home-07.jpg',
+    iconClass: 'flaticon-living-room',
+    carouselSubtitle: 'Fundaciones',
+    home: {
+      icon: '/img/iconos/02.svg',
+      alt: 'Recepción de sellos de fundación',
+      description:
+        'Verificación en terreno del suelo real, contraste con el estudio mecánico de suelos y autorización del inicio de fundaciones.',
+    },
+    banner: {
+      title: 'Recepción de sellos de fundación',
+      background: '/img/services/07.jpg',
+      overlayDark: 6,
+    },
+    intro: {
+      letter: 'RF',
+      intro:
+        'Revisamos el sello de fundación para asegurar que el terreno real cumpla con el estudio mecánico de suelos y las condiciones de diseño. Emitimos observaciones y autorizamos el inicio de las fundaciones cuando corresponde.',
+      quote: {
+        text: 'Un buen sello asegura el desempeño de toda la obra.',
+        cite: 'SOU Fundaciones',
+      },
+    },
+    gallery: {
+      images: [
+        '/img/galleryscroll/01.jpg',
+        '/img/galleryscroll/02.jpg',
+        '/img/galleryscroll/03.jpg',
+        '/img/galleryscroll/04.jpg',
+        '/img/galleryscroll/05.jpg',
+        '/img/galleryscroll/06.jpg',
+      ],
+    },
+    info: {
+      scopeTitle: 'Alcance del servicio',
+      scope: [
+        'Revisión del estudio mecánico de suelos y criterios de diseño de fundaciones.',
+        'Inspección en terreno del sello de fundación y condición del suelo real.',
+        'Registro fotográfico, evidencias y reporte técnico de conformidad.',
+        'Autorización de inicio de fundaciones o recomendaciones correctivas.',
+      ],
+      faqTitle: 'Preguntas frecuentes',
+      faqs: [
+        {
+          question: '¿Este servicio reemplaza a la ITO completa?',
+          answer:
+            'No, es un servicio independiente enfocado solo en la recepción del sello de fundación.',
+        },
+        {
+          question: '¿En qué momento se realiza la recepción?',
+          answer:
+            'Se realiza antes del hormigonado, para validar el terreno real y el sello de fundación.',
+        },
+        {
+          question: '¿Qué entregables incluyen?',
+          answer:
+            'Acta de recepción, registro fotográfico y recomendaciones técnicas cuando aplica.',
         },
       ],
     },

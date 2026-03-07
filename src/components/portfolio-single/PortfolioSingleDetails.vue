@@ -4,7 +4,7 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-7 col-md-12 mb-30">
-          <h4>Descripcion</h4>
+          <h4>Descripción</h4>
           <p class="mb-30">{{ descriptionText }}</p>
           <ul v-if="features.length" class="page-list list-unstyled">
             <li v-for="(feature, index) in features" :key="index">
@@ -14,7 +14,7 @@
               </div>
             </li>
           </ul>
-          <p v-else class="mb-30">No hay caracteristicas</p>
+          <p v-else class="mb-30">No hay características</p>
         </div>
         <div class="col-lg-4 offset-lg-1 col-md-12">
           <div v-if="info.length" class="cont">
@@ -30,8 +30,8 @@
           </div>
           <div v-else class="cont">
             <div class="item">
-              <div class="title">Informacion</div>
-              <div class="value">No hay informacion</div>
+              <div class="title">Información</div>
+              <div class="value">No hay información</div>
             </div>
           </div>
         </div>
@@ -52,7 +52,7 @@ const props = defineProps({
 
 const descriptionText = computed(() => {
   const text = props.details?.description?.trim();
-  return text ? text : 'No hay descripcion';
+  return text ? text : 'No hay descripción';
 });
 
 const features = computed(() => (props.details?.features?.length ? props.details.features : []));

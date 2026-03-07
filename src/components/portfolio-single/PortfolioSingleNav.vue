@@ -5,7 +5,7 @@
       <div class="row">
         <div class="col-md-5 rest">
           <div v-if="nav.prev" class="prv">
-            <div class="img bg-img" :data-background="nav.prev.image">
+            <div class="img bg-img" :data-background="nav.prev.image" :style="getBgStyle(nav.prev.image)">
               <div class="text-left ontop">
                 <h5><a :href="nav.prev.href">{{ nav.prev.title }}</a></h5>
               </div>
@@ -20,7 +20,7 @@
         </div>
         <div class="col-md-5 rest">
           <div v-if="nav.next" class="nxt">
-            <div class="img bg-img" :data-background="nav.next.image">
+            <div class="img bg-img" :data-background="nav.next.image" :style="getBgStyle(nav.next.image)">
               <div class="text-right ontop">
                 <h5><a :href="nav.next.href">{{ nav.next.title }}</a></h5>
               </div>
@@ -45,4 +45,5 @@ const props = defineProps({
 
 const nav = computed(() => props.nav || {});
 const showNav = computed(() => !!(nav.value?.prev || nav.value?.next || nav.value?.all));
+const getBgStyle = (image) => (image ? { backgroundImage: `url(${image})` } : {});
 </script>

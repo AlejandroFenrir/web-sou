@@ -17,6 +17,7 @@ import ServiceDetailsGallery from '../components/service-details/ServiceDetailsG
 import ServiceDetailsInfo from '../components/service-details/ServiceDetailsInfo.vue';
 import ServiceDetailsNav from '../components/service-details/ServiceDetailsNav.vue';
 import servicesCatalog, { getServiceBySlug } from '../data/servicios/ServiciosData.js';
+import { applySeo, buildBreadcrumbSchema, buildServiceSchema, buildWebPageSchema } from '../utils/seo';
 import { runThemeInit } from '../utils/theme';
 
 const route = useRoute();
@@ -72,6 +73,35 @@ const fallbackNav = {
 
 const nav = computed(() => buildNav(service.value) || fallbackNav);
 
+const applyServiceSeo = (current) => {
+  const description = current.short || current.intro?.intro || `Detalle del servicio ${current.title}.`;
+
+  applySeo({
+    title: `${current.title} | Servicios | SOU Ingeniería e Inspección`,
+    description,
+    image: current.banner?.background || current.image || null,
+    path: `/servicios/${current.slug}`,
+    structuredData: [
+      buildServiceSchema({
+        name: current.title,
+        description,
+        path: `/servicios/${current.slug}`,
+      }),
+      buildWebPageSchema({
+        name: current.title,
+        description,
+        path: `/servicios/${current.slug}`,
+        image: current.banner?.background || current.image || null,
+      }),
+      buildBreadcrumbSchema([
+        { name: 'Inicio', path: '/' },
+        { name: 'Servicios', path: '/servicios' },
+        { name: current.title, path: `/servicios/${current.slug}` },
+      ]),
+    ],
+  });
+};
+
 const loadService = async (slug) => {
   if (!slug) {
     const first = servicesCatalog[0];
@@ -88,6 +118,7 @@ const loadService = async (slug) => {
   }
 
   service.value = current;
+  applyServiceSeo(current);
   await nextTick();
   runThemeInit();
 };

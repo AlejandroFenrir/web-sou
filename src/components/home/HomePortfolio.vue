@@ -19,7 +19,11 @@
             <div v-if="portfolio.items.length" class="owl-carousel owl-theme">
               <div v-for="(item, index) in portfolio.items" :key="index" class="item mb-25">
                 <div class="img">
-                  <img v-if="item.image" :src="item.image" alt="" />
+                  <img
+                    v-if="item.image"
+                    :src="item.image"
+                    :alt="item.title ? `Proyecto ${item.title}` : 'Proyecto SOU'"
+                  />
                   <div v-else class="img-placeholder">No hay imagen</div>
                 </div>
                 <div class="icon-wrapper">
@@ -30,7 +34,7 @@
                 </div>
                 <div class="con">
                   <p>{{ item.category || 'Sin categoria' }}</p>
-                  <h5>{{ item.title || 'Sin titulo' }}</h5>
+                  <h5>{{ item.title || 'Sin título' }}</h5>
                   <div class="line"></div>
                   <div v-if="item.details && item.details.length" class="details">
                     <span v-for="(detail, dIndex) in item.details" :key="dIndex">
@@ -61,7 +65,7 @@ const portfolio = ref({
 });
 
 const hydratePortfolio = async () => {
-  const projects = await getPortfolioProjects();
+  const projects = await getPortfolioProjects({ force: true });
   if (!projects || projects.length === 0) {
     portfolio.value.items = [];
     return;

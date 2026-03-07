@@ -10,8 +10,8 @@
     text: 'Cotizar Proyecto'
   },
   circle: {
-    href: '/portfolio-single',
-    text: 'Proyecto - Completo - ',
+    href: '/proyectos',
+    text: 'Ver - Proyectos - ',
     iconClass: 'ti-check'
   },
   scroll: {

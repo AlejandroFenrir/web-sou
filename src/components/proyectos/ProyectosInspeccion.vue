@@ -18,17 +18,21 @@
           <div v-for="(item, index) in displayItems" :key="index" class="col-lg-6 col-md-12">
             <div class="item mb-25">
               <div class="img">
-                <img v-if="item.image" :src="item.image" alt="" />
+                <img
+                  v-if="item.image"
+                  :src="item.image"
+                  :alt="item.title ? `Proyecto ${item.title}` : 'Proyecto SOU'"
+                />
                 <div v-else class="img-placeholder">No hay imagen</div>
               </div>
               <div class="icon-wrapper">
                 <i class="ti-arrow-top-right default-icon"></i>
-                <a :href="item.link" class="hover-icon-link" title="View Project">
+                <a :href="item.link" class="hover-icon-link" title="Ver proyecto">
                   <i class="ti-arrow-top-right hover-icon"></i>
                 </a>
               </div>
               <div class="con">
-                <h5>{{ item.title || 'Sin titulo' }}</h5>
+                <h5>{{ item.title || 'Sin título' }}</h5>
                 <div class="line"></div>
                 <div v-if="item.details && item.details.length" class="details">
                   <span v-for="(detail, dIndex) in item.details" :key="dIndex">
@@ -85,7 +89,7 @@ const findSection = (sections, key, keywords = []) => {
 };
 
 onMounted(async () => {
-  const sections = await getPortfolioSections();
+  const sections = await getPortfolioSections({ force: true });
   if (!sections || sections.length === 0) return;
   const section = findSection(sections, 'inspeccion', ['inspeccion', 'obra gruesa']);
   if (section) {

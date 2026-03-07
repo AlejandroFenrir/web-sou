@@ -4,6 +4,7 @@
     class="banner-header middle-height section-padding valign bg-img bg-imgfixed"
     :data-overlay-dark="banner.overlayDark"
     :data-background="banner.background"
+    :style="backgroundStyle"
   >
     <video v-if="banner.video" class="banner-video" autoplay muted loop playsinline>
       <source :src="banner.video" type="video/mp4" />
@@ -33,4 +34,7 @@ const props = defineProps({
 });
 
 const banner = computed(() => props.banner || {});
+const backgroundStyle = computed(() =>
+  banner.value?.background ? { backgroundImage: `url(${banner.value.background})` } : {}
+);
 </script>
