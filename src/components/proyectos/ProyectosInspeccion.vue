@@ -93,7 +93,15 @@ onMounted(async () => {
   if (!sections || sections.length === 0) return;
   const section = findSection(sections, 'inspeccion', ['inspeccion', 'obra gruesa']);
   if (section) {
-    projects.value = section;
+    projects.value = {
+      ...section,
+      items: Array.isArray(section.items)
+        ? section.items.map((item) => ({
+            ...item,
+            details: Array.isArray(item.details) ? item.details.slice(0, 4) : [],
+          }))
+        : [],
+    };
   }
 });
 </script>

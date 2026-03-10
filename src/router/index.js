@@ -9,6 +9,7 @@ import PortfolioSingle from '../views/PortfolioSingle.vue';
 import Blog from '../views/Blog.vue';
 import Post from '../views/Post.vue';
 import NotFound from '../views/NotFound.vue';
+import { beginRouteTransition, endRouteTransition } from '../stores/appLoader';
 
 const router = createRouter({
   history: createWebHistory(),
@@ -31,6 +32,14 @@ const router = createRouter({
   scrollBehavior() {
     return { top: 0 };
   },
+});
+
+router.beforeEach(() => {
+  beginRouteTransition();
+});
+
+router.onError(() => {
+  endRouteTransition();
 });
 
 export default router;

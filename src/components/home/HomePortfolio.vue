@@ -72,7 +72,12 @@ const hydratePortfolio = async () => {
   }
 
   const featured = projects.filter((item) => item.is_featured);
-  portfolio.value.items = featured.length ? featured : projects;
+  const items = featured.length ? featured : projects;
+
+  portfolio.value.items = items.map((item) => ({
+    ...item,
+    details: Array.isArray(item.details) ? item.details.slice(0, 4) : [],
+  }));
 
   if (!portfolio.value.items.length) return;
 

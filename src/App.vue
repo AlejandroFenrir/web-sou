@@ -1,11 +1,6 @@
-﻿<template>
+<template>
   <div>
-    <div class="preloader-bg"></div>
-    <div id="preloader">
-      <div id="preloader-status">
-        <div class="preloader-position loader"><span></span></div>
-      </div>
-    </div>
+    <AppLoader />
     <div class="cursor js-cursor"></div>
     <div class="progress-wrap cursor-pointer">
       <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
@@ -20,14 +15,17 @@
 </template>
 
 <script setup>
-import { onMounted, onBeforeUnmount, nextTick, watch } from 'vue';
+import { nextTick, onBeforeUnmount, onMounted, watch } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
+import AppLoader from './components/AppLoader.vue';
 import Navbar from './components/Navbar.vue';
 import Footer from './components/Footer.vue';
+import { endRouteTransition, useAppLoader } from './stores/appLoader';
 import { applySeo, getRouteSeo } from './utils/seo';
 
 const route = useRoute();
 const router = useRouter();
+const { isVisible: isAppLoading } = useAppLoader();
 
 const applyRouteSeo = () => {
   const seo = getRouteSeo(route.name);
@@ -72,19 +70,30 @@ onMounted(async () => {
   if (window.SOUTheme && typeof window.SOUTheme.init === 'function') {
     window.SOUTheme.init();
   } else {
-    runPageInit();
+    await runPageInit();
   }
+  endRouteTransition();
 });
 
 onBeforeUnmount(() => {
   document.removeEventListener('click', onDocumentClick);
+  document.body.classList.remove('app-loading-active');
 });
 
 watch(
   () => route.fullPath,
-  () => {
+  async () => {
     applyRouteSeo();
-    runPageInit();
+    await runPageInit();
+    endRouteTransition();
   }
+);
+
+watch(
+  isAppLoading,
+  (loading) => {
+    document.body.classList.toggle('app-loading-active', loading);
+  },
+  { immediate: true }
 );
 </script>

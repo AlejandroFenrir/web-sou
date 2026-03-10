@@ -1,44 +1,55 @@
-﻿const data = {
+const data = {
   sectionLetter: 'T',
   sectionSubtitle: 'NUESTRO EQUIPO.',
   title: 'Nuestro equipo de expertos',
-  description: 'Un equipo técnico comprometido con la calidad estructural, la seguridad de las obras y el respaldo profesional a nuestros clientes.',
+  description: 'Un equipo técnico enfocado en inspección, diseño y apoyo especializado para proyectos de distintas escalas.',
   labels: {
-    university: 'Universidad',
+    education: 'Formación',
     specialty: 'Especialidad',
-    experience: 'Experiencia'
+    experience: 'Experiencia',
   },
-  members: [
+  groups: [
     {
-      name: 'Sebastián Ojeda Uribe',
-      role: 'Ingeniero Civil',
-      university: 'Universidad de Valparaíso',
-      specialty: 'Inspección Técnica de Obras y Coordinación BIM',
-      achievements: ['50.000 m² inspeccionados', '10.000 m² calculados'],
-      href: '/contacto'
+      title: '',
+      members: [
+        {
+          name: 'Sebastián Ojeda Uribe',
+          role: 'Ingeniero Civil',
+          position: 'Representante Legal',
+          education: 'Universidad de Valparaíso',
+          href: '/contacto',
+        },
+      ],
     },
     {
-      name: 'Alexis Reyes Salamanca',
-      role: 'Constructor Civil',
-      university: 'Universidad de Santiago de Chile',
-      specialty: 'Revisor de proyectos BIM',
-      achievements: ['50.000 m² inspeccionados'],
-      href: '/contacto'
+      title: 'Colaboradores',
+      members: [
+        {
+          name: 'Alexander González',
+          role: 'Ingeniero Civil',
+          position: 'Consultor externo',
+          education: 'Universidad de Valparaíso',
+          href: '/contacto',
+        },
+        {
+          name: 'Bárbara Triviño',
+          role: 'Dibujante de Arquitectura y Obras Civiles',
+          education: 'AIEP',
+          href: '/contacto',
+        },
+        {
+          name: 'Jacob Vergara',
+          role: 'Dibujante Arquitectónico y Estructural',
+          education: 'DUOC UC',
+          href: '/contacto',
+        },
+      ],
     },
-    {
-      name: 'Cristóbal Ojeda Ayacardy',
-      role: 'Constructor Civil',
-      university: 'Universidad de Los Lagos',
-      specialty: 'Gestión y supervisión de obras en terreno',
-      experience: 'Más de 30 años de experiencia en el ejercicio de la profesión.',
-      achievements: ['200.000 m² construidos'],
-      href: '/contacto'
-    }
   ],
   cta: {
     href: '/contacto',
-    text: 'Contáctanos'
-  }
+    text: 'Contáctanos',
+  },
 };
 
 export default data;

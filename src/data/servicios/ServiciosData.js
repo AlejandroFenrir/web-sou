@@ -29,12 +29,10 @@ const services = [
     },
     gallery: {
       images: [
-        '/img/galleryscroll/01.jpg',
-        '/img/galleryscroll/02.jpg',
-        '/img/galleryscroll/03.jpg',
-        '/img/galleryscroll/04.jpg',
-        '/img/galleryscroll/05.jpg',
-        '/img/galleryscroll/06.jpg',
+        '/img/galleryscroll/01/01.webp',
+        '/img/galleryscroll/01/02.webp',
+        '/img/galleryscroll/01/03.webp',
+        '/img/galleryscroll/01/04.webp',
       ],
     },
     info: {
@@ -95,12 +93,9 @@ const services = [
     },
     gallery: {
       images: [
-        '/img/galleryscroll/02.jpg',
-        '/img/galleryscroll/03.jpg',
-        '/img/galleryscroll/04.jpg',
-        '/img/galleryscroll/05.jpg',
-        '/img/galleryscroll/06.jpg',
-        '/img/galleryscroll/01.jpg',
+        '/img/galleryscroll/02/01.webp',
+        '/img/galleryscroll/02/02.webp',
+        '/img/galleryscroll/02/03.webp',
       ],
     },
     info: {
@@ -161,12 +156,13 @@ const services = [
     },
     gallery: {
       images: [
-        '/img/galleryscroll/03.jpg',
-        '/img/galleryscroll/04.jpg',
-        '/img/galleryscroll/05.jpg',
-        '/img/galleryscroll/06.jpg',
-        '/img/galleryscroll/01.jpg',
-        '/img/galleryscroll/02.jpg',
+        '/img/galleryscroll/03/01.jpg',
+        '/img/galleryscroll/03/02.webp',
+        '/img/galleryscroll/03/03.webp',
+        '/img/galleryscroll/03/04.webp',
+        '/img/galleryscroll/03/05.webp',
+        '/img/galleryscroll/03/06.jpg',
+        '/img/galleryscroll/03/07.webp',
       ],
     },
     info: {
@@ -229,12 +225,8 @@ const services = [
     },
     gallery: {
       images: [
-        '/img/galleryscroll/04.jpg',
-        '/img/galleryscroll/05.jpg',
-        '/img/galleryscroll/06.jpg',
-        '/img/galleryscroll/01.jpg',
-        '/img/galleryscroll/02.jpg',
-        '/img/galleryscroll/03.jpg',
+        '/img/galleryscroll/04/01.webp',
+        '/img/galleryscroll/04/02.webp',
       ],
     },
     info: {
@@ -295,12 +287,9 @@ const services = [
     },
     gallery: {
       images: [
-        '/img/galleryscroll/05.jpg',
-        '/img/galleryscroll/06.jpg',
-        '/img/galleryscroll/01.jpg',
-        '/img/galleryscroll/02.jpg',
-        '/img/galleryscroll/03.jpg',
-        '/img/galleryscroll/04.jpg',
+        '/img/galleryscroll/05/01.webp',
+        '/img/galleryscroll/05/02.webp',
+        '/img/galleryscroll/05/03.webp',
       ],
     },
     info: {
@@ -361,12 +350,13 @@ const services = [
     },
     gallery: {
       images: [
-        '/img/galleryscroll/06.jpg',
-        '/img/galleryscroll/01.jpg',
-        '/img/galleryscroll/02.jpg',
-        '/img/galleryscroll/03.jpg',
-        '/img/galleryscroll/04.jpg',
-        '/img/galleryscroll/05.jpg',
+        '/img/galleryscroll/06/01.png',
+        '/img/galleryscroll/06/02.png',
+        '/img/galleryscroll/06/03.png',
+        '/img/galleryscroll/06/04.webp',
+        '/img/galleryscroll/06/05.webp',
+        '/img/galleryscroll/06/06.png',
+        '/img/galleryscroll/06/07.png',
       ],
     },
     info: {
@@ -427,12 +417,10 @@ const services = [
     },
     gallery: {
       images: [
-        '/img/galleryscroll/01.jpg',
-        '/img/galleryscroll/02.jpg',
-        '/img/galleryscroll/03.jpg',
-        '/img/galleryscroll/04.jpg',
-        '/img/galleryscroll/05.jpg',
-        '/img/galleryscroll/06.jpg',
+        '/img/galleryscroll/07/01.webp',
+        '/img/galleryscroll/07/02.webp',
+        '/img/galleryscroll/07/03.webp',
+        '/img/galleryscroll/07/04.webp',
       ],
     },
     info: {

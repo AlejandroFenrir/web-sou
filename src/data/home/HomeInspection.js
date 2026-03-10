@@ -23,21 +23,21 @@
         href: '/contacto',
         text: 'Contactar'
       }
-    },
-    {
-      title: 'Inspección Técnica Avanzada',
-      bullets: [
-        'Inspección visual y dimensional',
-        'Medición mediante escáner',
-        'Continuidad y calidad de soldadura',
-        'Criterios alineados a estándar AWS',
-        'Informe detallado y trazabilidad documental'
-      ],
-      cta: {
-        href: '/contacto',
-        text: 'Contactar'
-      }
-    }
+    }//,
+   // {
+   //   title: 'Inspección Técnica Avanzada',
+   //   bullets: [
+   //     'Inspección visual y dimensional',
+   //     'Medición mediante escáner',
+   //     'Continuidad y calidad de soldadura',
+   //     'Criterios alineados a estándar AWS',
+   //     'Informe detallado y trazabilidad documental'
+   //   ],
+   //   cta: {
+   //     href: '/contacto',
+   //     text: 'Contactar'
+   //   }
+   // }
   ]
 };
 

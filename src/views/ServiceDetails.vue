@@ -1,5 +1,5 @@
 <template>
-  <main>
+  <main v-if="isReady">
     <ServiceDetailsBanner :banner="banner" />
     <ServiceDetailsIntro :intro="intro" />
     <ServiceDetailsGallery :gallery="gallery" />
@@ -24,6 +24,7 @@ const route = useRoute();
 const router = useRouter();
 
 const service = ref(null);
+const isReady = ref(false);
 
 const fallbackBanner = { title: '', background: '', overlayDark: 5 };
 const fallbackIntro = { intro: '', quote: { text: '', cite: '' } };
@@ -103,6 +104,9 @@ const applyServiceSeo = (current) => {
 };
 
 const loadService = async (slug) => {
+  isReady.value = false;
+  service.value = null;
+
   if (!slug) {
     const first = servicesCatalog[0];
     if (first) {
@@ -121,6 +125,7 @@ const loadService = async (slug) => {
   applyServiceSeo(current);
   await nextTick();
   runThemeInit();
+  isReady.value = true;
 };
 
 watch(

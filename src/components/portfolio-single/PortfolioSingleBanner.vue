@@ -1,5 +1,4 @@
 <template>
-  <!-- Header Banner -->
   <div
     class="banner-header middle-height section-padding valign bg-img bg-imgfixed"
     :data-overlay-dark="overlayDark"
@@ -26,7 +25,7 @@ const props = defineProps({
   },
 });
 
-const title = computed(() => props.banner?.title || 'Sin título');
+const title = computed(() => props.banner?.title || '');
 const background = computed(() => props.banner?.background || null);
 const overlayDark = computed(() => props.banner?.overlayDark ?? 0);
 const backgroundStyle = computed(() =>

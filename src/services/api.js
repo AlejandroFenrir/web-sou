@@ -1,3 +1,5 @@
+import { trackRequest } from '../stores/appLoader';
+
 const normalizeBaseUrl = (baseUrl) => {
   if (!baseUrl) return '';
   return baseUrl.endsWith('/') ? baseUrl.slice(0, -1) : baseUrl;
@@ -12,17 +14,19 @@ const buildUrl = (path) => {
 };
 
 export const apiGet = async (path) => {
-  const response = await fetch(buildUrl(path), {
-    headers: {
-      Accept: 'application/json',
-    },
+  return trackRequest(async () => {
+    const response = await fetch(buildUrl(path), {
+      headers: {
+        Accept: 'application/json',
+      },
+    });
+
+    if (!response.ok) {
+      throw new Error(`API error ${response.status}`);
+    }
+
+    return response.json();
   });
-
-  if (!response.ok) {
-    throw new Error(`API error ${response.status}`);
-  }
-
-  return response.json();
 };
 
 export { API_BASE_URL };
