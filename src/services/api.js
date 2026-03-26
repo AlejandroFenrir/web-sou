@@ -29,4 +29,28 @@ export const apiGet = async (path) => {
   });
 };
 
+export const apiPost = async (path, payload) => {
+  return trackRequest(async () => {
+    const response = await fetch(buildUrl(path), {
+      method: 'POST',
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(payload),
+    });
+
+    const data = await response.json().catch(() => null);
+
+    if (!response.ok) {
+      const error = new Error(data?.message || `API error ${response.status}`);
+      error.status = response.status;
+      error.data = data;
+      throw error;
+    }
+
+    return data;
+  });
+};
+
 export { API_BASE_URL };
