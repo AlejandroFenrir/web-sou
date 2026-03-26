@@ -5,7 +5,7 @@
   },
   brand: {
     logo: '/img/logo-dark.svg',
-    description: 'SOU Ingeniería e Inspección SpA\nIngeniería estructural, inspección de obras y asesorías Sur de Chile',
+    description: 'SOU Ingeniería e Inspección SpA\nIngeniería estructural, sanitaria, inspección de obras y asesorías Sur de Chile',
     social: [
       { href: '#', iconClass: 'fa-brands fa-instagram' },
       { href: '#', iconClass: 'fab fa-x-twitter' },
@@ -17,8 +17,8 @@
     location: 'Puerto Montt',
     phone: '+56 9 9782 9016',
     phoneHref: 'tel:+56997829016',
-    email: 'contacto@souingenieria.cl',
-    emailHref: 'mailto:contacto@souingenieria.cl'
+    email: 's.ojeda@souingenieria.cl',
+    emailHref: 'mailto:s.ojeda@souingenieria.cl'
   },
   links: [
     { label: 'Inicio', href: '/', type: 'route' },

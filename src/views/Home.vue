@@ -11,7 +11,7 @@
     <HomeTeam />
     <HomeFaqs />
     <HomeContact />
-    <HomeBlog />
+    <!-- <HomeBlog /> -->
   </main>
 </template>
 

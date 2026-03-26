@@ -3,7 +3,7 @@
   sectionSubtitle: 'INSPECCIÓN DE SOLDADURAS.',
   logo: '/img/AWS-logo.png',
   title: 'INSPECCIÓN DE SOLDADURAS INDUSTRIALES',
-  description: 'Años de experiencia 15. Servicio especializado de inspección de soldaduras industriales, apoyado en equipamiento de medición avanzada y criterios técnicos alineados a estándares AWS para asegurar calidad y seguridad estructural.',
+  description: 'Servicio especializado de inspección de soldaduras industriales, apoyado en equipamiento de medición avanzada y criterios técnicos alineados a estándares AWS para asegurar calidad y seguridad estructural.',
   info: {
     iconClass: 'fa-thin fa-handshake',
     text: '¿Necesitas saber sobre este servicio?',

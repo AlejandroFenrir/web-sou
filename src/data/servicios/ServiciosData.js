@@ -19,7 +19,7 @@ const services = [
       overlayDark: 5,
     },
     intro: {
-      letter: 'IE',
+      letter: 'I',
       intro:
         'Diseñamos estructuras seguras y eficientes, con un enfoque sismo-resistente y un desarrollo técnico que considera cada etapa del proyecto. Nuestro trabajo integra cálculo, coordinación y especificaciones claras para construir con confianza.',
       quote: {
@@ -83,7 +83,7 @@ const services = [
       overlayDark: 6,
     },
     intro: {
-      letter: 'IO',
+      letter: 'I',
       intro:
         'Supervisamos la ejecución en terreno asegurando calidad, seguridad y cumplimiento contractual. Aplicamos protocolos de inspección, control de avances y reportes claros para la toma de decisiones.',
       quote: {
@@ -131,7 +131,7 @@ const services = [
     title: 'Modelación y revisión BIM',
     short:
       'Modelación 3D, revisión de interferencias entre especialidades y optimización de costos y plazos de proyecto.',
-    image: '/img/services/home-03.jpg',
+    image: '/img/services/home-03.webp',
     iconClass: 'flaticon-interior-design',
     carouselSubtitle: 'BIM',
     home: {
@@ -142,13 +142,13 @@ const services = [
     },
     banner: {
       title: 'Modelación y revisión BIM',
-      background: '/img/services/03.jpg',
+      background: '/img/services/03.webp',
       overlayDark: 6,
     },
     intro: {
-      letter: 'MR',
+      letter: 'B',
       intro:
-        'Coordinamos modelos BIM para anticipar interferencias, mejorar la constructibilidad y reducir reprocesos. Integramos arquitectura, estructura e instalaciones con criterios claros de coordinación.',
+        'Coordinamos modelos BIM para anticipar interferencias, mejorar la constructibilidad y reducir reprocesos. Integramos arquitectura, estructura y especialidades con criterios claros de coordinación.',
       quote: {
         text: 'Coordinar antes de construir es ahorrar en obra.',
         cite: 'SOU BIM',
@@ -156,13 +156,10 @@ const services = [
     },
     gallery: {
       images: [
-        '/img/galleryscroll/03/01.jpg',
+        '/img/galleryscroll/03/01.webp',
         '/img/galleryscroll/03/02.webp',
         '/img/galleryscroll/03/03.webp',
         '/img/galleryscroll/03/04.webp',
-        '/img/galleryscroll/03/05.webp',
-        '/img/galleryscroll/03/06.jpg',
-        '/img/galleryscroll/03/07.webp',
       ],
     },
     info: {
@@ -277,11 +274,11 @@ const services = [
       overlayDark: 6,
     },
     intro: {
-      letter: 'IS',
+      letter: 'S',
       intro:
         'Diseñamos redes de agua potable y alcantarillado, considerando normativas vigentes, eficiencia hidráulica y facilidad de mantención. Coordinamos con especialidades para una ejecución limpia.',
       quote: {
-        text: 'El agua bien diseñada es salud y continuidad operativa.',
+        text: 'Las redes de agua bien diseñadas aseguran continuidad de operación.',
         cite: 'SOU Sanitaria',
       },
     },
@@ -340,7 +337,7 @@ const services = [
       overlayDark: 6,
     },
     intro: {
-      letter: 'LE',
+      letter: 'E',
       intro:
         'Levantamos información estructural en terreno para diagnósticos, regularizaciones o ampliaciones. Usamos herramientas de medición y ensayos que entregan datos confiables.',
       quote: {
@@ -407,7 +404,7 @@ const services = [
       overlayDark: 6,
     },
     intro: {
-      letter: 'RF',
+      letter: 'F',
       intro:
         'Revisamos el sello de fundación para asegurar que el terreno real cumpla con el estudio mecánico de suelos y las condiciones de diseño. Emitimos observaciones y autorizamos el inicio de las fundaciones cuando corresponde.',
       quote: {
