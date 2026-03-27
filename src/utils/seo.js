@@ -1,5 +1,5 @@
 const SITE_NAME = 'SOU Ingeniería e Inspección';
-const DEFAULT_SITE_URL = 'https://app.souingenieria.cl';
+const DEFAULT_SITE_URL = 'https://souingenieria.cl';
 const DEFAULT_IMAGE = '/img/01.jpg';
 const DEFAULT_DESCRIPTION =
   'SOU desarrolla ingeniería estructural, inspección técnica de obras, BIM, asesorías, ingeniería sanitaria y levantamiento estructural.';

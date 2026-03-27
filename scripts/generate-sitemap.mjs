@@ -19,7 +19,7 @@ function readEnvValue(key) {
   }
 }
 
-const siteUrl = readEnvValue('VITE_SITE_URL') || 'https://app.souingenieria.cl';
+const siteUrl = readEnvValue('VITE_SITE_URL') || 'https://souingenieria.cl';
 const apiUrl = readEnvValue('VITE_API_URL') || 'https://admin.souingenieria.cl';
 const today = new Date().toISOString().split('T')[0];
 
