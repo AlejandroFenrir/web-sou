@@ -1399,7 +1399,8 @@ blockquote.vert-move {
     .nav-scroll .logo {}
     .logo-img {
         margin-bottom: 0px;
-        width: 175px;
+        width: 140px;
+        padding: 20px;
     }
     .navbar button {
         margin-right: 0px;

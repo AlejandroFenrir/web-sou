@@ -38,7 +38,7 @@
                     <li v-for="(bullet, bIndex) in plan.bullets" :key="bIndex">{{ bullet }}</li>
                   </ul>
                 </div>
-                <div class="mount ml-auto text-center">
+                <div class="mount">
                   <div>
                     <a :href="plan.cta.href" class="durubtn">
                       <span class="text-wrapper">
