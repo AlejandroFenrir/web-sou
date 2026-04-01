@@ -39,7 +39,6 @@
                   </ul>
                 </div>
                 <div class="mount ml-auto text-center">
-                  <h3 class="text-light"><span></span>{{ plan.cta.text }}</h3>
                   <div>
                     <a :href="plan.cta.href" class="durubtn">
                       <span class="text-wrapper">

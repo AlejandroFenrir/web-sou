@@ -1381,8 +1381,16 @@ blockquote.vert-move {
         padding: 20px 15px;
         background-color: transparent;
     }
+    .mobile-menu-open .logo-wrapper {
+        padding: 20px 15px;
+        background-color: transparent;
+    }
     .nav-scroll .logo-img {
         width: 100px;
+    }
+    .mobile-menu-open .logo-img {
+        width: 100px;
+        padding: 10px;
     }
     .navbar .logo {
         text-align: left;
