@@ -3,7 +3,7 @@
     {
       iconClass: 'fa-thin fa-envelope',
       title: 'Escríbenos',
-      text: 'contacto@souingenieria.cl',
+      text: 's.ojeda@souingenieria.cl',
       bigIconClass: 'fa-solid fa-envelope'
     },
     {
