@@ -253,10 +253,37 @@
     function initOwl($elements, options) {
         $elements.each(function () {
             var $el = $(this);
+            var autoplayTimeout = Number(options && options.autoplayTimeout) || 5000;
+            var autoplayResumeDelay = 7000;
+            var resumeAutoplayTimer = null;
+
+            function queueAutoplayResume() {
+                if (!options || !options.autoplay) {
+                    return;
+                }
+                $el.trigger('stop.owl.autoplay');
+                clearTimeout(resumeAutoplayTimer);
+                resumeAutoplayTimer = window.setTimeout(function () {
+                    if (!document.body.contains($el.get(0))) {
+                        return;
+                    }
+                    $el.trigger('play.owl.autoplay', [autoplayTimeout]);
+                }, autoplayResumeDelay);
+            }
+
             if ($el.hasClass('owl-loaded')) {
                 return;
             }
             $el.owlCarousel(options);
+
+            if (options && options.autoplay && !$el.data('souAutoplayPauseBound')) {
+                $el.on('touchstart.souAutoplayPause mousedown.souAutoplayPause', '.owl-stage, .owl-prev, .owl-next, .owl-dot', queueAutoplayResume);
+                $el.on('destroy.owl.carousel', function () {
+                    clearTimeout(resumeAutoplayTimer);
+                    $el.removeData('souAutoplayPauseBound');
+                });
+                $el.data('souAutoplayPauseBound', true);
+            }
         });
     }
 
@@ -762,24 +789,32 @@
     }
     
     // Accordion Box (for Faqs)
-    if ($(".accordion-box").length) {
-        $(document).on("click", ".accordion-box .acc-btn", function () {
-            var outerBox = $(this).closest(".accordion-box");
-            var target = $(this).closest(".accordion");
-            if ($(this).next(".acc-content").is(":visible")) {
-                $(this).removeClass("active");
-                $(this).next(".acc-content").slideUp(300);
-                outerBox.children(".accordion").removeClass("active-block");
-            } else {
-                outerBox.find(".accordion .acc-btn").removeClass("active");
-                $(this).addClass("active");
-                outerBox.children(".accordion").removeClass("active-block");
-                outerBox.find(".accordion").children(".acc-content").slideUp(300);
-                target.addClass("active-block");
-                $(this).next(".acc-content").slideDown(300);
+    $(document)
+        .off("click.souAccordion", ".accordion-box .acc-btn")
+        .on("click.souAccordion", ".accordion-box .acc-btn", function () {
+            var $button = $(this);
+            var $outerBox = $button.closest(".accordion-box");
+            var $target = $button.closest(".accordion");
+            var $content = $button.next(".acc-content");
+            var $allContent = $outerBox.find(".accordion > .acc-content");
+
+            $allContent.stop(true, true);
+
+            if ($content.is(":visible")) {
+                $button.removeClass("active");
+                $target.removeClass("active-block");
+                $content.slideUp(300);
+                return;
             }
+
+            $outerBox.find(".accordion .acc-btn").removeClass("active");
+            $outerBox.children(".accordion").removeClass("active-block");
+            $allContent.not($content).slideUp(300);
+
+            $button.addClass("active");
+            $target.addClass("active-block");
+            $content.slideDown(300);
         });
-    }
     
     // Magnific Popup Settings
     $(document).on('click', '.popup-img', function (e) {

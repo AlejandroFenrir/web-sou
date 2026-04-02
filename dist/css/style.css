@@ -1172,6 +1172,11 @@ blockquote.vert-move {
     height: 30px;
     line-height: 30px;
 }
+.navbar .navbar-nav .nav-link .letter {
+    -webkit-transition-delay: 0s !important;
+    -o-transition-delay: 0s !important;
+    transition-delay: 0s !important;
+}
 .navbar .navbar-nav .nav-link.nav-color {
     color: #fff;
 }
@@ -1399,7 +1404,8 @@ blockquote.vert-move {
     .nav-scroll .logo {}
     .logo-img {
         margin-bottom: 0px;
-        width: 175px;
+        width: 140px;
+        padding: 20px;
     }
     .navbar button {
         margin-right: 0px;
@@ -1475,7 +1481,7 @@ blockquote.vert-move {
         overflow: auto;
         background: #171717;
         text-align: left;
-        padding: 20px;
+        padding: 50px 20px 20px 20px;
     }
     .dropdown .nav-link i {
         color: #fff;

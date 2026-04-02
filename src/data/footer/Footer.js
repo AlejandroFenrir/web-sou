@@ -7,9 +7,9 @@
     logo: '/img/logo-dark.svg',
     description: 'SOU Ingeniería e Inspección SpA\nIngeniería estructural, sanitaria, inspección de obras y asesorías Sur de Chile',
     social: [
-      { href: '#', iconClass: 'fa-brands fa-instagram' },
-      { href: '#', iconClass: 'fab fa-x-twitter' },
-      { href: '#', iconClass: 'fa-brands fa-facebook-f' }
+      { href: 'https://www.instagram.com', iconClass: 'fa-brands fa-instagram' },
+      { href: 'https://www.instagram.com', iconClass: 'fab fa-x-twitter' },
+      { href: 'https://www.instagram.com', iconClass: 'fa-brands fa-facebook-f' }
     ]
   },
   contact: {

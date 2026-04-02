@@ -14,13 +14,15 @@
                   <img :src="footer.brand.logo" alt="" />
                 </div>
                 <p class="mb-15" v-html="footer.brand.description.replace(/\n/g, '<br />')"></p>
+<!--
                 <div class="social-icons mb-30">
                   <ul class="list-inline">
                     <li v-for="(item, index) in footer.brand.social" :key="index">
-                      <a :href="item.href"><i :class="item.iconClass"></i></a>
+                      <a :href="item.href" target="blank"><i :class="item.iconClass"></i></a>
                     </li>
                   </ul>
                 </div>
+-->
               </div>
             </div>
             <div class="col-md-8">

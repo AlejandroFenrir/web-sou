@@ -1172,6 +1172,11 @@ blockquote.vert-move {
     height: 30px;
     line-height: 30px;
 }
+.navbar .navbar-nav .nav-link .letter {
+    -webkit-transition-delay: 0s !important;
+    -o-transition-delay: 0s !important;
+    transition-delay: 0s !important;
+}
 .navbar .navbar-nav .nav-link.nav-color {
     color: #fff;
 }
@@ -2797,7 +2802,7 @@ blockquote.vert-move {
 .services2 .item .con {
     padding: 30px;
     position: absolute;
-    bottom: -110px;
+    bottom: -140px;
     text-align: center;
     width: 100%;
     transition: all .7s;

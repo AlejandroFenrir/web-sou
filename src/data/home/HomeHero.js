@@ -11,7 +11,7 @@
   },
   circle: {
     href: '/proyectos',
-    text: 'Ver - Proyectos - ',
+    text: 'Nuestros   -   Proyectos   -   ',
     iconClass: 'ti-check'
   },
   scroll: {

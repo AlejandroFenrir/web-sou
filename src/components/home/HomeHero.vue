@@ -30,7 +30,7 @@
                     <path id="textcircle" d="M250,400 a150,150 0 0,1 0,-300a150,150 0 0,1 0,300Z"></path>
                   </defs>
                   <text>
-                    <textPath xlink:href="#textcircle" startOffset="0">
+                    <textPath xlink:href="#textcircle" startOffset="0" style="letter-spacing: 23px;">
                       {{ hero.circle.text }}
                     </textPath>
                   </text>

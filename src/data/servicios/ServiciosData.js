@@ -3,7 +3,7 @@ const services = [
     slug: 'ingenieria-estructural',
     title: 'Ingeniería estructural',
     short:
-      'Proyectos estructurales en hormigón armado, albañilería, acero y madera.<br /><br />',
+      'Proyectos estructurales en hormigón armado, albañilería, acero y madera.<br /><br /><br />',
     image: '/img/services/home-01.jpg',
     iconClass: 'flaticon-houses',
     carouselSubtitle: 'Estructuras',
@@ -67,7 +67,7 @@ const services = [
     slug: 'inspeccion-tecnica-de-obras',
     title: 'Inspección técnica de obras',
     short:
-      'Control del fiel cumplimiento de la ejecución de obras, plazos, calidad, avance físico y financiero.',
+      'Control del fiel cumplimiento de la ejecución de obras, plazos, calidad, avance físico y financiero.<br /><br />',
     image: '/img/services/home-02.jpg',
     iconClass: 'flaticon-living-room',
     carouselSubtitle: 'Inspección',
@@ -130,7 +130,7 @@ const services = [
     slug: 'modelacion-y-revision-bim',
     title: 'Modelación y revisión BIM',
     short:
-      'Modelación 3D, revisión de interferencias entre especialidades y optimización de costos y plazos de proyecto.',
+      'Modelación 3D, revisión de interferencias entre especialidades y optimización de costos y plazos de proyecto.<br /><br />',
     image: '/img/services/home-03.webp',
     iconClass: 'flaticon-interior-design',
     carouselSubtitle: 'BIM',
@@ -321,7 +321,7 @@ const services = [
     slug: 'levantamiento-estructural',
     title: 'Levantamiento estructural',
     short:
-      'Escáner de armaduras, medición de espesores de perfiles. Plan de ensayos para evaluación estructural',
+      'Escáner de armaduras, medición de espesores de perfiles. Plan de ensayos para evaluación estructural<br /><br />',
     image: '/img/services/home-06.jpg',
     iconClass: 'flaticon-bathtub',
     carouselSubtitle: 'Levantamiento',
