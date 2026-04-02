@@ -2,7 +2,7 @@
   background: '/img/banner3.jpg',
   overlayDark: 2,
   video: {
-    href: 'https://youtu.be/hBf0DOrAUsI',
+    href: 'https://youtu.be/CE0wEMnP2yg',
     text: 'Ver Video'
   },
   stat: {
