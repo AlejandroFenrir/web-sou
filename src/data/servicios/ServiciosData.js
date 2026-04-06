@@ -194,7 +194,7 @@ const services = [
     slug: 'asesorias',
     title: 'Asesorías',
     short:
-      'Estudio, cubicación y presupuesto de proyectos. Regularización de edificaciones<br /><br />',
+      'Estudio, cubicación y presupuesto de proyectos. Regularización de edificaciones<br /><br /><br />',
     image: '/img/services/home-04.jpg',
     iconClass: 'flaticon-medieval-house',
     carouselSubtitle: 'Asesorías',
@@ -258,7 +258,7 @@ const services = [
     slug: 'ingenieria-sanitaria',
     title: 'Ingeniería sanitaria',
     short:
-      'Proyectos de instalaciones domiciliarias de agua potable y alcantarillado urbano y rural.<br /><br />',
+      'Proyectos de instalaciones domiciliarias de agua potable y alcantarillado urbano y rural.<br /><br /><br />',
     image: '/img/services/home-05.jpg',
     iconClass: 'flaticon-kitchen',
     carouselSubtitle: 'Sanitaria',
@@ -388,7 +388,7 @@ const services = [
     slug: 'recepcion-sellos-fundacion',
     title: 'Recepción de sellos de fundación',
     short:
-      'Servicio independiente que verifica que el suelo real coincida con el estudio mecánico de suelos y autoriza el inicio de fundaciones.',
+      'Servicio independiente que verifica que el suelo real coincida con el estudio mecánico de suelos y autoriza el inicio de fundaciones.<br /><br />',
     image: '/img/services/home-07.jpg',
     iconClass: 'flaticon-living-room',
     carouselSubtitle: 'Fundaciones',

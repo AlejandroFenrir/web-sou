@@ -14,7 +14,7 @@
         </div>
       </div>
       <div class="row align-items-center">
-        <div class="col-lg-5 col-md-12 mb-30">
+        <div class="col-lg-6 col-md-12 mb-30">
           <div class="section-title mb-25">{{ faqs.title }}</div>
           <ul class="accordion-box clearfix">
             <li v-for="(item, index) in faqs.faqs" :key="index" class="accordion block">
@@ -32,7 +32,7 @@
         <div class="col-lg-3 col-md-6 mb-60 position-relative z-2">
           <img class="animation-float1 float-overlap" :src="faqs.images.main" alt="" />
         </div>
-        <div class="col-lg-4 col-md-6 mb-20 position-relative z-1">
+        <div class="col-lg-3 col-md-6 mb-20 position-relative z-1">
           <img class="animation-float2" :src="faqs.images.secondary" alt="" />
         </div>
       </div>

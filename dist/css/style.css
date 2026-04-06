@@ -2842,9 +2842,9 @@ blockquote.vert-move {
 /* permalink */
 .services2 .item .con .permalink {
     color: rgba(255, 255, 255, 0.7);
-    height: 0;
+    height: 120px;
     overflow: hidden;
-    display: -webkit-box;
+    display: block;
     -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
     -ms-transition: all .3s ease;

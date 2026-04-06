@@ -2802,7 +2802,7 @@ blockquote.vert-move {
 .services2 .item .con {
     padding: 30px;
     position: absolute;
-    bottom: -140px;
+    bottom: -150px;
     text-align: center;
     width: 100%;
     transition: all .7s;
@@ -2842,9 +2842,8 @@ blockquote.vert-move {
 /* permalink */
 .services2 .item .con .permalink {
     color: rgba(255, 255, 255, 0.7);
-    height: 0;
-    overflow: hidden;
-    display: -webkit-box;
+    height: 120px;
+    display: block;
     -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
     -ms-transition: all .3s ease;
@@ -2852,7 +2851,6 @@ blockquote.vert-move {
     -moz-transition: all .3s ease;
     -webkit-transition: all .3s ease;
     transition: all .3s ease;
-    display: inline;
 }
 .services2 .item .con .permalink a:hover,
 .services2 .item .con .permalink i:hover {
