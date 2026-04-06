@@ -23,7 +23,28 @@
               </div>
               <div class="acc-content">
                 <div class="content">
-                  <p>{{ item.answer }}</p>
+                  <p>
+                    <template v-if="item.answerParts?.length">
+                      <template v-for="(part, partIndex) in item.answerParts" :key="partIndex">
+                        <RouterLink
+                          v-if="part.type === 'route'"
+                          :to="part.href"
+                          class="faq-answer-link"
+                        >
+                          {{ part.text }}
+                        </RouterLink>
+                        <a
+                          v-else-if="part.href"
+                          :href="part.href"
+                          class="faq-answer-link"
+                        >
+                          {{ part.text }}
+                        </a>
+                        <template v-else>{{ part.text }}</template>
+                      </template>
+                    </template>
+                    <template v-else>{{ item.answer }}</template>
+                  </p>
                 </div>
               </div>
             </li>
@@ -43,3 +64,15 @@
 <script setup>
 import faqs from '../../data/home/HomeFaqs.js';
 </script>
+
+<style scoped>
+.faq-answer-link {
+  color: #FD961E;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.faq-answer-link:hover {
+  color: #FD961E;
+}
+</style>
